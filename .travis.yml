@@ -3,8 +3,12 @@ python:
   - "3.6"
   
 sudo: required
+env: DISPLAY=':99.0'
 addons:
   chrome: stable 
+
+before_script:
+  - sh -e /etc/init.d/xvfb start
 
 install:
   - cp contrib/env-sample .env
