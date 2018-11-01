@@ -5,7 +5,9 @@ import unittest
 
 class NewVisitorTest(LiveServerTestCase):
     def setUp(self):
-        self.browser = webdriver.Chrome()
+        chrome_options = webdriver.ChromeOptions()
+        chrome_options.add_argument('--no-sandbox')
+        self.browser = webdriver.Chrome(chrome_options=chrome_options)
 
     def tearDown(self):
         self.browser.quit()
