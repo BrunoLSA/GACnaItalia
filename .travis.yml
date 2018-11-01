@@ -1,6 +1,11 @@
 language: python
 python:
   - "3.6"
+  
+sudo: required
+addons:
+  chrome: stable 
+
 install:
   - cp contrib/env-sample .env
   - pip install -q -r requirements.txt
