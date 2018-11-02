@@ -1,6 +1,26 @@
 language: python
+dist: xenial
+sudo: true
 python:
   - "3.6"
+
+env: DISPLAY=':99.0'
+
+addons:
+  chrome: stable 
+  apt:
+    packages:
+      - chromium-chromedriver
+
+before_script:
+  # include ChromeDriver in PATH
+  - ln --symbolic /usr/lib/chromium-browser/chromedriver "${HOME}/bin/chromedriver"
+  # start Chrome and listen on localhost
+  #- google-chrome-stable --headless --disable-gpu --remote-debugging-port=9222 http://localhost &
+  - sh -e /etc/init.d/xvfb start
+  - sleep 3
+
+  
 install:
   - cp contrib/env-sample .env
   - pip install -q -r requirements.txt
