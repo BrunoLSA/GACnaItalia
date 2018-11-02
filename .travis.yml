@@ -2,12 +2,16 @@ language: python
 dist: xenial
 sudo: true
 python:
-  - "3.6"
+  - '3.6'
 
-env: DISPLAY=':99.0'
+env:
+  matrix:
+    - DISPLAY=':99.0'
+  global:
+    secure: C6EVQe58foTdLj1MCzgWQJkEn3ji1NCuBd46R9J9owPYJqyrlc1voYh0XHZYmzgZUz+9vwp/pS+ZB9ev01LdZCrk3cJkl2e/AQBZSQzbd1hyxQG2WgeMjeLW2Pal0JubjK2ekcGBQEMmFRCAjmAGw6lVWux9LZf5HyIuhvpS2sMBuQ7CoRsk8yF+s/jtz3CkJCTKfnZuLO9t09Ub333e/8qSokMML+odMTlHt9o4RJCgesXqmgo7H1vafbTOZRJFbM+L9XnFL+N0IWUmn5WlZ3uG3fAaULQko5jGXTr1dLUvKFzVXzb9omTUbRE2lVrl/z7tyXBGiyB+AZ7z8EWAl13nZvT4lpJs8ZIkJgUj7PaTlqdSoToHtoN5EWjb1o1MVKJP4YptnXjEzZk1yWAWGQ+XQHgfIvAkWD+A6PjiPNQAArmB2596xy+aIWurZHJ1ppBq+kdtWqjbm9EHoiSo0+Gwf8/E+Bqr4CvxmlmDL4aDKSUe2Q+2dcp/md/zwNzSSvFcuFNd5XphBpQPpDr9q2rB1HvJD2Iqn21NSjDLHbyM8mqY0ZpIOcDvwG3uo8L/hRrAfHJuFDKJbwixKuxO/JumBNuud5aX/zTvMlYtnFeUUQGQ7Hf3xgegSRH8xGogY6B2Fsz/MgPVNDMiTbUhqko4CBD5py+rHWHZO8n7q+c=
 
 addons:
-  chrome: stable 
+  chrome: stable
   apt:
     packages:
       - chromium-chromedriver
@@ -20,10 +24,10 @@ before_script:
   - sh -e /etc/init.d/xvfb start
   - sleep 3
 
-  
 install:
   - cp contrib/env-sample .env
   - pip install -q -r requirements-dev.txt
+
 script:
   - flake8
   - python manage.py test
