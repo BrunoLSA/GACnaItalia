@@ -1,4 +1,6 @@
-GAC na Itália
+[![Build Status](https://travis-ci.org/BrunoLSA/GACnaItalia.svg?branch=master)](https://travis-ci.org/BrunoLSA/GACnaItalia)
+
+GAC na Itália 
 
 O **1º Grupo de Aviação de Caça** lutou na II Guerra mundial nos céus da Itália.
 
