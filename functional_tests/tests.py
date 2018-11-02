@@ -24,7 +24,6 @@ class NewVisitorTest(LiveServerTestCase):
 
         # He sees the Italy map
 
-
         # He sees some historical points on the map
 
         # He clicks on one point and it shows its
