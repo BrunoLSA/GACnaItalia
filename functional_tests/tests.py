@@ -1,6 +1,5 @@
 from django.test import LiveServerTestCase
 from selenium import webdriver
-import unittest
 
 
 class NewVisitorTest(LiveServerTestCase):
@@ -22,7 +21,7 @@ class NewVisitorTest(LiveServerTestCase):
         self.assertIn('GAC na Itália', self.browser.title)
         header_text = self.browser.find_element_by_tag_name('h1').text
         self.assertIn('1ºGAVCA na Itália', header_text)
-        #self.fail('Finish the test!')
+        # self.fail('Finish the test!')
 
         # He sees the Italy map
 
