@@ -1,8 +1,8 @@
-from django.test import LiveServerTestCase
 from selenium import webdriver
+from functional_tests.base import FunctionalTest
 
 
-class NewVisitorTest(LiveServerTestCase):
+class NewVisitorTest(FunctionalTest):
     def setUp(self):
         chrome_options = webdriver.ChromeOptions()
         chrome_options.add_argument('--no-sandbox')
