@@ -5,3 +5,4 @@
 .idea
 *pyc
 __pycache__
+.coverage

@@ -1,6 +1,7 @@
 [![Build Status](https://travis-ci.org/BrunoLSA/GACnaItalia.svg?branch=master)](https://travis-ci.org/BrunoLSA/GACnaItalia)
 [![Updates](https://pyup.io/repos/github/BrunoLSA/GACnaItalia/shield.svg)](https://pyup.io/repos/github/BrunoLSA/GACnaItalia/)
 [![Python 3](https://pyup.io/repos/github/BrunoLSA/GACnaItalia/python-3-shield.svg)](https://pyup.io/repos/github/BrunoLSA/GACnaItalia/)
+[![codecov](https://codecov.io/gh/BrunoLSA/GACnaItalia/branch/master/graph/badge.svg)](https://codecov.io/gh/BrunoLSA/GACnaItalia)
 
 
 GAC na Itália 
