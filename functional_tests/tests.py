@@ -1,13 +1,7 @@
-from selenium import webdriver
 from functional_tests.base import FunctionalTest
 
 
 class NewVisitorTest(FunctionalTest):
-    def setUp(self):
-        chrome_options = webdriver.ChromeOptions()
-        chrome_options.add_argument('--no-sandbox')
-        self.browser = webdriver.Chrome(chrome_options=chrome_options)
-
     def tearDown(self):
         self.browser.quit()
 
