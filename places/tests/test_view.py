@@ -12,5 +12,6 @@ class HomePageTest(TestCase):
         self.assertEqual(found.func, home_page)
 
     def test_uses_home_template(self):
+        '''home_page should use home.tml template'''
         response = self.client.get('/')
         self.assertTemplateUsed(response, 'places/home.html')
