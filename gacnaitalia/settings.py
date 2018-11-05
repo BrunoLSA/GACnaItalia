@@ -40,6 +40,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    # other apps
+    'test_without_migrations',
+
     # my apps
     'places',
 ]

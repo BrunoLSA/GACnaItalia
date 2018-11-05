@@ -1,7 +1,17 @@
 from functional_tests.base import FunctionalTest
+from places.models import HistoricPlaces
 
 
 class NewVisitorTest(FunctionalTest):
+    def setUp(self):
+        self.point = HistoricPlaces.objects.create(
+            title='ponto 1',
+            description='monumento erguido em homenagem aos heróis da guerra',
+            longitude=12.020,
+            latitude=43.300,
+        )
+        super(NewVisitorTest, self).setUp()
+
     def tearDown(self):
         self.browser.quit()
 
