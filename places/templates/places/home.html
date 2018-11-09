@@ -25,7 +25,10 @@
       var markers = [];
       var locations = [
             {% for location in historic_places %}
-                ['{{ location.title }}', {{ location.latitude }}, {{ location.longitude }}],
+                [
+                '{{ location.title }}', '{{ location.description }}',
+                {{ location.latitude }}, {{ location.longitude }}
+                ],
             {% endfor %}
       ];
 
@@ -42,12 +45,20 @@
           for (var i = 0; i < locations.length; i++) {
 
               var location = locations[i];
+              var contentString = '<div id="content">'+
+                      '<div id="siteNotice">'+
+                      '</div>'+
+                      '<h1 id="firstHeading" class="firstHeading">'+location[0]+'</h1>'+
+                      '<div id="bodyContent">'+
+                      '<p>'+location[1]+'</p>'+
+                      '</div>'+
+                      '</div>';
               var locationInfoWindow = new google.maps.InfoWindow({
-                  content: location[0],
+                  content: contentString,
               });
 
               var marker = new google.maps.Marker({
-                  position: {lat: location[1], lng: location[2]},
+                  position: {lat: location[2], lng: location[3]},
                   map: map,
                   infowindow: locationInfoWindow
               });
