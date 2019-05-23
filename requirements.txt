@@ -3,5 +3,5 @@ Django==2.1.7
 python-decouple==3.1
 pytz==2018.7
 selenium==3.141.0
-urllib3==1.24.1
+urllib3==1.25.3
 django-test-without-migrations==0.6
